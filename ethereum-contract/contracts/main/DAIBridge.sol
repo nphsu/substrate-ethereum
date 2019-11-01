@@ -11,9 +11,9 @@ contract DAIBridge {
         token = _token;
     }
 
-    function setTransfer(uint amount, bytes32 substrateAddress) public {
+    function setTransfer() public {
         // TODO: validate
-        token.transferFrom(msg.sender, address(this), amount);
+        // token.transferFrom(msg.sender, address(this), amount);
         // TODO: event
         emit RelayMessage();
     }
